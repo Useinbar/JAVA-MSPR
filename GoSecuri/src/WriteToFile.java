@@ -12,5 +12,6 @@ public class WriteToFile
         Files.writeString(fileName, content);
         String actual = Files.readString(fileName);
         System.out.println(actual);
+
     }
 }
