@@ -39,7 +39,7 @@ public class Materiels {
      *
      */
     public static String afficherListMateriels() {
-        Map<String, String> listMateriels = listMateriels("txt/liste.txt");
+        Map<String, String> listMateriels = listMateriels("../txt/liste.txt");
         System.out.println("Liste de materiels :");
         String listeDuMateriel = "";
         for (Map.Entry mapentry : listMateriels.entrySet()) {
