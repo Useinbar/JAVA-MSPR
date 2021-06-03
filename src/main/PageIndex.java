@@ -28,7 +28,7 @@ public class PageIndex {
             System.out.println(listInfoAgent.get(0));
             String prenom = listInfoAgent.get(1);
             String nom = listInfoAgent.get(0);
-            newBlocAgents += "<a href=\"../html/" + agent + ".html\">" + prenom + " " + nom + " </a> <br>";
+            newBlocAgents += "<a href=\"../" + agent + ".html\">" + prenom + " " + nom + " </a> <br>";
         }
 
         System.out.println(newBlocAgents);
