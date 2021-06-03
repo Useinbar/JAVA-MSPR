@@ -1,3 +1,5 @@
+package main;
+
 import org.xml.sax.SAXException;
 
 import javax.xml.parsers.ParserConfigurationException;
@@ -15,13 +17,13 @@ public class Main {
             PageAgent.createPageAgent(agent);
         }
 
-//        Agents.afficherListAgents(agents);
+//        main.Agents.afficherListAgents(agents);
 //
 //        System.out.println();
 //
 //        Map<String, String> materiels;
-//        materiels = Materiels.listMateriels("txt/liste.txt");
-//        Materiels.afficherListMateriels(materiels);
-//        PageIndex.index();
+//        materiels = main.Materiels.listMateriels("txt/liste.txt");
+//        main.Materiels.afficherListMateriels(materiels);
+//        main.PageIndex.index();
     }
 }

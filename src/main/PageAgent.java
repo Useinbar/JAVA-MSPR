@@ -1,3 +1,5 @@
+package main;
+
 import org.xml.sax.SAXException;
 
 import javax.xml.parsers.ParserConfigurationException;
@@ -28,6 +30,7 @@ public class PageAgent {
                 blocMateriel +="<div>  <input type=\"checkbox\"  onclick=\"return false;\"> <label for=\"scales\">"+materiel.get(item)+"</label></div>";
             }
         }
+
 
         System.out.println(blocMateriel);
 
