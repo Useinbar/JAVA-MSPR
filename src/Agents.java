@@ -35,4 +35,24 @@ public class Agents {
             System.out.println(agent);
         }
     }
+
+    public static ArrayList<String> infoAgents(String fichier) {
+        ArrayList<String> listInfoAgents = new ArrayList<>();
+        try {
+            FileReader file = new FileReader(fichier);
+            BufferedReader bufferedReader = new BufferedReader(file);
+            String line;
+            line = bufferedReader.readLine();
+            while (line != null) {
+                listInfoAgents.add(line);
+                line = bufferedReader.readLine();
+            }
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        return listInfoAgents;
+
+    }
+
+
 }

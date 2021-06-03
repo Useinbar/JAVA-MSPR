@@ -36,12 +36,16 @@ public class Materiels {
     }
 
     /**
-     * @param listMateriels Affiche la MapList passée en paramètre
+     *
      */
-    public static void afficherListMateriels(Map<String, String> listMateriels) {
+    public static String afficherListMateriels() {
+        Map<String, String> listMateriels = listMateriels("txt/liste.txt");
         System.out.println("Liste de materiels :");
+        String listeDuMateriel = "";
         for (Map.Entry mapentry : listMateriels.entrySet()) {
-            System.out.println("clé: " + mapentry.getKey() + " | valeur: " + mapentry.getValue());
+            listeDuMateriel += mapentry.getValue() + "<br>";
+//            System.out.println("clé: " + mapentry.getKey() + " | valeur: " + mapentry.getValue());
         }
+        return listeDuMateriel;
     }
 }
