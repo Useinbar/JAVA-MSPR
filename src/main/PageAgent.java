@@ -1,3 +1,5 @@
+package main;
+
 import org.xml.sax.SAXException;
 
 import javax.xml.parsers.ParserConfigurationException;
@@ -29,11 +31,12 @@ public class PageAgent {
             }
         }
 
+
         System.out.println(blocMateriel);
 
 
 
-        Path nouvFichier = Paths.get("../html/" + agent + ".html");
+        Path nouvFichier = Paths.get("../" + agent + ".html");
         String contenuPageAgent = "<!DOCTYPE html>\n" +
                 "<html lang=\"fr\">\n" +
                 "<head>\n" +
