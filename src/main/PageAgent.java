@@ -36,7 +36,7 @@ public class PageAgent {
 
 
 
-        Path nouvFichier = Paths.get("../" + agent + ".html");
+        Path nouvFichier = Paths.get(Main.path + agent + ".html");
         String contenuPageAgent = "<!DOCTYPE html>\n" +
                 "<html lang=\"fr\">\n" +
                 "<head>\n" +
