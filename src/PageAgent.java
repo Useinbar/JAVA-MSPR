@@ -19,7 +19,7 @@ public class PageAgent {
                 "    <title>Agent :" + agent + "</title>\n" +
                 "</head>\n" +
                 "<body>\n" +
-                "<img src=\"images/" + agent + ".png\"\n" +
+                "<img src=\"../images/" + agent + ".png\"\n" +
                 "     alt=\"Photo de l'agent \">\n" +
                 "<p>" + Materiels.afficherListMateriels() + "</p>\n" +
                 "</body>\n" +
