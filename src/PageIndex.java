@@ -11,8 +11,8 @@ public class PageIndex {
 /** On copie le index-static.html, qui est le "corps" de l'index html dans le fichier index.html.
  **/
 
-        Path indexStaticPath = Paths.get("../html/index-static.html");
-        Path indexPath = Paths.get("../html/index.html");
+        Path indexStaticPath = Paths.get("../index-static.html");
+        Path indexPath = Paths.get("../index.html");
         try {
             Files.copy(indexStaticPath, indexPath, StandardCopyOption.REPLACE_EXISTING);
         } catch (IOException ex) {
@@ -27,7 +27,7 @@ public class PageIndex {
             System.out.println(listInfoAgent.get(0));
             String prenom = listInfoAgent.get(1);
             String nom = listInfoAgent.get(0);
-            newBlocAgents += "<a href=\"../html/" + agent + ".html\">" + prenom + " " + nom + " </a> <br>";
+            newBlocAgents += "<a href=\"../" + agent + ".html\">" + prenom + " " + nom + " </a> <br>";
         }
 
         System.out.println(newBlocAgents);

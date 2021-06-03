@@ -17,14 +17,19 @@ public class PageAgent {
 
         ArrayList infoAgents = Agents.infoAgents(agent);
         Map<String, String> materiel=  Materiels.listMateriels("../txt/liste.txt");
-//        System.out.println(infoAgents);
-//        System.out.println(Materiels.listMateriels("txt/liste.txt"));
+        System.out.println(infoAgents);
+        System.out.println(Materiels.listMateriels("../liste.txt"));
 
-//        for (String item : materiel.keySet()) {
-//            if (item.contains())
-//            blocMateriel += materiel.get(item);
-//            System.out.println(blocMateriel);
-//        }
+        for (String item : materiel.keySet()) {
+            if (infoAgents.contains(item)) {
+                blocMateriel += "<div>  <input type=\"checkbox\"  onclick=\"return false;\" checked> <label for=\"scales\">" + materiel.get(item) + "</label></div>";
+            }
+            else{
+                blocMateriel +="<div>  <input type=\"checkbox\"  onclick=\"return false;\"> <label for=\"scales\">"+materiel.get(item)+"</label></div>";
+            }
+        }
+
+        System.out.println(blocMateriel);
 
 
 
