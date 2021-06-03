@@ -5,13 +5,30 @@ import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
+import java.util.ArrayList;
 import java.util.Collections;
+import java.util.Map;
 
 public class PageAgent {
 
     public static void createPageAgent(String agent) throws IOException {
+        String blocMateriel= "";
 
-        Path nouvFichier = Paths.get("html/" + agent + ".html");
+
+        ArrayList infoAgents = Agents.infoAgents(agent);
+        Map<String, String> materiel=  Materiels.listMateriels("../txt/liste.txt");
+//        System.out.println(infoAgents);
+//        System.out.println(Materiels.listMateriels("txt/liste.txt"));
+
+//        for (String item : materiel.keySet()) {
+//            if (item.contains())
+//            blocMateriel += materiel.get(item);
+//            System.out.println(blocMateriel);
+//        }
+
+
+
+        Path nouvFichier = Paths.get("../html/" + agent + ".html");
         String contenuPageAgent = "<!DOCTYPE html>\n" +
                 "<html lang=\"fr\">\n" +
                 "<head>\n" +
@@ -21,7 +38,7 @@ public class PageAgent {
                 "<body>\n" +
                 "<img src=\"../images/" + agent + ".png\"\n" +
                 "     alt=\"Photo de l'agent \">\n" +
-                "<p>" + Materiels.afficherListMateriels() + "</p>\n" +
+                "<p>" + blocMateriel + "</p>\n" +
                 "</body>\n" +
                 "\n" +
                 "</html>\n" +

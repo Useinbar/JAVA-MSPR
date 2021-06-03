@@ -10,7 +10,7 @@ public class Main {
     public static void main(String[] args) throws IOException, ParserConfigurationException, SAXException {
         PageIndex.pageIndex();
         ArrayList<String> agents;
-        agents = Agents.listAgents("txt/staff.txt");
+        agents = Agents.listAgents("../txt/staff.txt");
         for (String agent : agents) {
             PageAgent.createPageAgent(agent);
         }

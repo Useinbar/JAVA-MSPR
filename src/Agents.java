@@ -36,7 +36,8 @@ public class Agents {
         }
     }
 
-    public static ArrayList<String> infoAgents(String fichier) {
+    public static ArrayList<String> infoAgents(String agent) {
+        String fichier = "../txt/" + agent + ".txt";
         ArrayList<String> listInfoAgents = new ArrayList<>();
         try {
             FileReader file = new FileReader(fichier);
