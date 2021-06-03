@@ -12,8 +12,8 @@ public class PageIndex {
 /** On copie le index-static.html, qui est le "corps" de l'index html dans le fichier index.html.
  **/
 
-        Path indexStaticPath = Paths.get("../html/index-static.html");
-        Path indexPath = Paths.get("../html/index.html");
+        Path indexStaticPath = Paths.get(Main.path+"html/index-static.html");
+        Path indexPath = Paths.get(Main.path+"html/index.html");
         try {
             Files.copy(indexStaticPath, indexPath, StandardCopyOption.REPLACE_EXISTING);
         } catch (IOException ex) {
@@ -23,7 +23,7 @@ public class PageIndex {
  * Création du String qui affichera la liste des agents + les liens hypertextes à insérer dans la page html.index
  */
         String newBlocAgents = "";
-        for (String agent : Agents.listAgents("../txt/staff.txt")) {
+        for (String agent : Agents.listAgents(Main.path+"txt/staff.txt")) {
             ArrayList<String> listInfoAgent = Agents.infoAgents(agent);
             System.out.println(listInfoAgent.get(0));
             String prenom = listInfoAgent.get(1);

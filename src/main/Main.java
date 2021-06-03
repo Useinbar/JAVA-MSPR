@@ -9,10 +9,17 @@ import java.util.Map;
 
 public class Main {
 
+//    final static String path = "";
+   final static String path = "../../";
+
+
     public static void main(String[] args) throws IOException, ParserConfigurationException, SAXException {
+
+
+
         PageIndex.pageIndex();
         ArrayList<String> agents;
-        agents = Agents.listAgents("../txt/staff.txt");
+        agents = Agents.listAgents(path+"txt/staff.txt");
         for (String agent : agents) {
             PageAgent.createPageAgent(agent);
         }
