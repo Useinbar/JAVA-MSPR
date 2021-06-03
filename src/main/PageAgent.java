@@ -20,7 +20,7 @@ public class PageAgent {
         ArrayList infoAgents = Agents.infoAgents(agent);
         Map<String, String> materiel=  Materiels.listMateriels("../txt/liste.txt");
         System.out.println(infoAgents);
-        System.out.println(Materiels.listMateriels("../liste.txt"));
+        System.out.println(Materiels.listMateriels("../txt/liste.txt"));
 
         for (String item : materiel.keySet()) {
             if (infoAgents.contains(item)) {
@@ -36,7 +36,7 @@ public class PageAgent {
 
 
 
-        Path nouvFichier = Paths.get("../" + agent + ".html");
+        Path nouvFichier = Paths.get("../html/" + agent + ".html");
         String contenuPageAgent = "<!DOCTYPE html>\n" +
                 "<html lang=\"fr\">\n" +
                 "<head>\n" +
