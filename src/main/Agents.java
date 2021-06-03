@@ -11,38 +11,12 @@ public class Agents {
      * @param fichier fichier contenant la liste des agents
      * @return un ArrayList des agents contenu dans le fichier en paramètre
      */
-    public static ArrayList<String> listAgents(String fichier) {
-        ArrayList<String> agents = new ArrayList<>();
-        try {
-            FileReader file = new FileReader(fichier);
-            BufferedReader bufferedReader = new BufferedReader(file);
-            String line;
-            line = bufferedReader.readLine();
-            while (line != null) {
-                agents.add(line);
-                line = bufferedReader.readLine();
-            }
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-        return agents;
-    }
 
-    /**
-     * @param listAgents Affiche l'ArrayList passée en paramètre
-     */
-    public static void afficherListAgents(ArrayList<String> listAgents) {
-        System.out.println("Liste des agents :");
-        for (String agent : listAgents) {
-            System.out.println(agent);
-        }
-    }
-
-    public static ArrayList<String> infoAgents(String agent) {
-        String fichier = Main.path+"txt/" + agent + ".txt";
+    public static ArrayList<String> txtToList(String fichier) {
+        String fichierTxt = Main.path+"txt/" + fichier + ".txt";
         ArrayList<String> listInfoAgents = new ArrayList<>();
         try {
-            FileReader file = new FileReader(fichier);
+            FileReader file = new FileReader(fichierTxt);
             BufferedReader bufferedReader = new BufferedReader(file);
             String line;
             line = bufferedReader.readLine();
@@ -57,5 +31,13 @@ public class Agents {
 
     }
 
-
+    /**
+     * @param listAgents Affiche l'ArrayList passée en paramètre
+     */
+    public static void afficherListAgents(ArrayList<String> listAgents) {
+        System.out.println("Liste des agents :");
+        for (String agent : listAgents) {
+            System.out.println(agent);
+        }
+    }
 }

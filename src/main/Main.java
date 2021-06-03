@@ -19,7 +19,7 @@ public class Main {
 
         PageIndex.pageIndex();
         ArrayList<String> agents;
-        agents = Agents.listAgents(Main.path+"txt/staff.txt");
+        agents = Agents.txtToList("staff");
         for (String agent : agents) {
             PageAgent.createPageAgent(agent);
         }

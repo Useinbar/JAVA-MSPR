@@ -1,8 +1,5 @@
 package main;
 
-import org.xml.sax.SAXException;
-
-import javax.xml.parsers.ParserConfigurationException;
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
@@ -17,7 +14,7 @@ public class PageAgent {
         String blocMateriel= "";
 
 
-        ArrayList infoAgents = Agents.infoAgents(agent);
+        ArrayList infoAgents = Agents.txtToList(agent);
         Map<String, String> materiel=  Materiels.listMateriels(Main.path+"txt/liste.txt");
         System.out.println(infoAgents);
         System.out.println(Materiels.listMateriels(Main.path+"txt/liste.txt"));

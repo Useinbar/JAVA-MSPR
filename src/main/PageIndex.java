@@ -23,8 +23,8 @@ public class PageIndex {
  * Création du String qui affichera la liste des agents + les liens hypertextes à insérer dans la page html.index
  */
         String newBlocAgents = "";
-        for (String agent : Agents.listAgents(Main.path+"txt/staff.txt")) {
-            ArrayList<String> listInfoAgent = Agents.infoAgents(agent);
+        for (String agent : Agents.txtToList("staff")) {
+            ArrayList<String> listInfoAgent = Agents.txtToList(agent);
             System.out.println(listInfoAgent.get(0));
             String prenom = listInfoAgent.get(1);
             String nom = listInfoAgent.get(0);
