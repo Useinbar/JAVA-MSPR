@@ -4,6 +4,8 @@ import java.io.*;
 import java.nio.file.*;
 
 import java.util.ArrayList;
+import java.util.Collections;
+import java.util.stream.Collectors;
 
 
 public class PageIndex {
@@ -23,12 +25,13 @@ public class PageIndex {
  * Création du String qui affichera la liste des agents + les liens hypertextes à insérer dans la page html.index
  */
         String newBlocAgents = "";
-        for (String agent : Agents.txtToList("staff")) {
+        ArrayList<String> listAgentsSorted = Agents.txtToList("staff");
+        Collections.sort(listAgentsSorted);
+        for (String agent : listAgentsSorted) {
             ArrayList<String> listInfoAgent = Agents.txtToList(agent);
-            System.out.println(listInfoAgent.get(0));
             String prenom = listInfoAgent.get(1);
             String nom = listInfoAgent.get(0);
-            newBlocAgents += "<a href=\"../" + agent + ".html\">" + prenom + " " + nom + " </a> <br>";
+            newBlocAgents += "<a href=\"../" + agent + ".html\">" + nom + " " + prenom + " </a> <br><br>";
         }
 
         System.out.println(newBlocAgents);

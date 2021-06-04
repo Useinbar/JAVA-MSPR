@@ -1,0 +1,30 @@
+html {
+}
+
+a { color: inherit; }
+p
+{
+font-size : 20px;
+    font- family: "Roboto";
+    font-weight: 700;
+}
+#carteid
+{
+    text-align: right;
+
+}
+
+.vert{
+    color: #659224;}
+
+.bleu{
+    color : #379EC1;}
+
+    #bottom {
+      position: absolute;
+      bottom: 0;
+    right: 0;
+    }
+
+
+

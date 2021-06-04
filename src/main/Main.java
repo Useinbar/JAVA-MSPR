@@ -9,8 +9,8 @@ import java.util.Map;
 
 public class Main {
 
-//    final static String path = "";
-   final static String path = "../";
+    final static String path = "";
+//   final static String path = "../";
 
 
     public static void main(String[] args) throws IOException, ParserConfigurationException, SAXException {
@@ -21,6 +21,7 @@ public class Main {
         ArrayList<String> agents;
         agents = Agents.txtToList("staff");
         for (String agent : agents) {
+
             PageAgent.createPageAgent(agent);
         }
 
