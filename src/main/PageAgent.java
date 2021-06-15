@@ -29,6 +29,8 @@ public class PageAgent {
         }
 
 
+
+
         System.out.println(blocMateriel);
 
 
@@ -45,7 +47,7 @@ public class PageAgent {
                 "</head>\n" +
                 "<body>\n" +
                 "<h1>"+prenom+" "+nom+"</h1>\n" +
-                "<form> <input type=\"button\"  value=\"Retour à l'index\" onclick=\"\"history.back()\"></form>\n"+
+                "<form> <input type=\"button\"  value=\"Retour à l'index\" onclick=\"\"history.go(-1)\"></form>\n"+
                 "<img src=\"../images/" + agent + ".png \"\n" +
                 "     alt=\"Photo de l'agent \"" +
                 "width=\"500\" >\n" +
