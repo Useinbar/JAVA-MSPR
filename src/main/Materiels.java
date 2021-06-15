@@ -12,7 +12,7 @@ public class Materiels {
      * @param fichier fichier contenant la liste de materiels
      * @return une MapList contenant la liste de matériels disponibles
      */
-    public static Map<String, String> listMateriels(String fichier) {
+    public static Map<String, String> listMateriels(String fichier) throws FileNotFoundException {
         Map<String, String> materiels = new HashMap<>();
 
         try {
@@ -32,7 +32,8 @@ public class Materiels {
                 line = bufferedReader.readLine();
             }
         } catch (IOException e) {
-            e.printStackTrace();
+            //e.printStackTrace();
+            throw new FileNotFoundException();
         }
         return materiels;
     }
@@ -40,7 +41,7 @@ public class Materiels {
     /**
      *
      */
-    public static String afficherListMateriels() {
+    public static String afficherListMateriels() throws FileNotFoundException {
         Map<String, String> listMateriels = listMateriels(Main.path+"txt/liste.txt");
         System.out.println("Liste de materiels :");
         String listeDuMateriel = "";

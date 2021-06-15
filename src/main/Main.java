@@ -10,8 +10,8 @@ import java.util.Map;
 
 public class Main {
 
-//    final static String path = "";
-   final static String path = "../";
+    final static String path = "";
+//   final static String path = "../";
 // cd ../ --> Simon TODO
 // echo $WORKSPACE
 
