@@ -22,11 +22,11 @@ public class PageIndex {
             System.out.println("Le fichier index-static n'a pas été trouvé");
         }
 /**
- * Création du String qui affichera la liste des agents + les liens hypertextes à insérer dans la page html.index
+ * Création du String (au format HTML) qui affichera la liste des agents + les liens hypertextes à insérer dans la page html.index
  */
         String newBlocAgents = "";
         ArrayList<String> listAgentsSorted = Agents.txtToList("staff");
-        Collections.sort(listAgentsSorted);
+        Collections.sort(listAgentsSorted); // On trie les agents par ordre alphabétique par rapport à leur prénom
         for (String agent : listAgentsSorted) {
             ArrayList<String> listInfoAgent = Agents.txtToList(agent);
             String prenom = listInfoAgent.get(1);
