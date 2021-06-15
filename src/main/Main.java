@@ -10,8 +10,8 @@ import java.util.Map;
 
 public class Main {
 
-//    final static String path = "";
-   final static String path = "../";
+    final static String path = "";
+//   final static String path = "../";
 // cd ../ --> Simon TODO
 // echo $WORKSPACE
 
@@ -22,10 +22,8 @@ public class Main {
         ArrayList<String> agents;
         agents = Agents.txtToList("staff");
         for (String agent : agents) {
-
             PageAgent.createPageAgent(agent);
         }
-
 //        main.Agents.afficherListAgents(agents);
 //
 //        System.out.println();

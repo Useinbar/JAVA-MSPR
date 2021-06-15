@@ -52,7 +52,7 @@ public class PageAgent {
                 "     alt=\"Photo de l'agent \"" +
                 "width=\"500\" >\n" +
                 "<center>"+
-                "<p>" + blocMateriel + "Coucou"+"</p></center>\n" +
+                "<p>" + blocMateriel +"</p></center>\n" +
                 "</body>\n" +
                 "\n" +
                 "</html>\n" +
