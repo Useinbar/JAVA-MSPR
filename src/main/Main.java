@@ -22,10 +22,8 @@ public class Main {
         ArrayList<String> agents;
         agents = Agents.txtToList("staff");
         for (String agent : agents) {
-
             PageAgent.createPageAgent(agent);
         }
-
 //        main.Agents.afficherListAgents(agents);
 //
 //        System.out.println();
