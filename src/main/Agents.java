@@ -2,8 +2,11 @@ package main;
 
 import java.io.BufferedReader;
 import java.io.FileReader;
+import java.nio.file.Path;
+import java.nio.file.Paths;
 import java.util.ArrayList;
 import java.io.*;
+import java.util.List;
 
 public class Agents {
 
@@ -30,15 +33,5 @@ public class Agents {
         }
         return listInfoAgents;
 
-    }
-
-    /**
-     * @param listAgents Affiche l'ArrayList passée en paramètre
-     */
-    public static void afficherListAgents(ArrayList<String> listAgents) {
-        System.out.println("Liste des agents :");
-        for (String agent : listAgents) {
-            System.out.println(agent);
-        }
     }
 }

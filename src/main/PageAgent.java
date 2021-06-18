@@ -16,8 +16,6 @@ public class PageAgent {
 
         ArrayList infoAgents = Agents.txtToList(agent);
         Map<String, String> materiel=  Materiels.listMateriels(Main.path+"txt/liste.txt");
-        System.out.println(infoAgents);
-        System.out.println(Materiels.listMateriels(Main.path+"txt/liste.txt"));
 
         for (String item : materiel.keySet()) {
             if (infoAgents.contains(item)) {
@@ -28,10 +26,6 @@ public class PageAgent {
             }
         }
 
-
-
-
-        System.out.println(blocMateriel);
 
 
         String prenom = Agents.txtToList(agent).get(0);
