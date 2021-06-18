@@ -1,8 +1,6 @@
 package test;
 
 import main.Agents;
-import main.Main;
-import main.Materiels;
 import org.junit.jupiter.api.Test;
 
 import java.io.FileNotFoundException;
@@ -16,6 +14,7 @@ public class AgentsTest {
     /**
      * Test nominal : vérifie la présence des quelques éléments du fichier passé en paramètre
      * dans la liste retournée par la méthode txtToList
+     *
      * @throws FileNotFoundException
      */
     @Test
@@ -28,6 +27,7 @@ public class AgentsTest {
 
     /**
      * Test de cas particuliers : Vérifie qu'une liste vide est retournée si le fichier est vide
+     *
      * @throws FileNotFoundException
      */
     @Test

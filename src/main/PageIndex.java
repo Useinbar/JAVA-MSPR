@@ -1,4 +1,5 @@
 package main;
+
 import java.io.*;
 import java.nio.file.*;
 import java.util.ArrayList;
@@ -10,8 +11,8 @@ public class PageIndex {
 /** On copie le index-static.html, qui est le "corps" de l'index html dans le fichier index.html.
  **/
 
-        Path indexStaticPath = Paths.get(Main.path+"html/index-static.html");
-        Path indexPath = Paths.get(Main.path+"html/index.html");
+        Path indexStaticPath = Paths.get(Main.path + "html/index-static.html");
+        Path indexPath = Paths.get(Main.path + "html/index.html");
         try {
             Files.copy(indexStaticPath, indexPath, StandardCopyOption.REPLACE_EXISTING);
         } catch (IOException ex) {
@@ -21,11 +22,11 @@ public class PageIndex {
  * Création du String (au format HTML) qui affichera la liste des agents + les liens hypertextes à insérer dans la page html.index
  */
         String newBlocAgents = "";
-        ArrayList<String> listAgentsSorted = Agents.txtToList(Main.path+"txt/staff.txt");
+        ArrayList<String> listAgentsSorted = Agents.txtToList(Main.path + "txt/staff.txt");
 
         Collections.sort(listAgentsSorted); // On trie les agents par ordre alphabétique par rapport à leur prénom
         for (String agent : listAgentsSorted) {
-            ArrayList<String> listInfoAgent = Agents.txtToList(Main.path+"txt/"+agent+".txt");
+            ArrayList<String> listInfoAgent = Agents.txtToList(Main.path + "txt/" + agent + ".txt");
             String prenom = listInfoAgent.get(1);
             String nom = listInfoAgent.get(0);
             newBlocAgents += "<a href=\"../" + agent + ".html\">" + nom + " " + prenom + " </a> <br><br>";

@@ -16,7 +16,6 @@ public class Materiels {
         Map<String, String> materiels = new HashMap<>();
 
 
-
         try {
             FileReader file = new FileReader(fichier);
             BufferedReader bufferedReader = new BufferedReader(file);

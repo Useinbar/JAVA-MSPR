@@ -1,5 +1,7 @@
 package main;
+
 import org.xml.sax.SAXException;
+
 import javax.xml.parsers.ParserConfigurationException;
 import java.io.IOException;
 import java.nio.file.Files;
@@ -16,17 +18,17 @@ public class Main {
 //   final static String path = "../";
 
 
-    public static void main(String[] args) throws IOException{
+    public static void main(String[] args) throws IOException {
 
         PageIndex.pageIndex();
         ArrayList<String> agents;
-        agents = Agents.txtToList(path+"txt/staff.txt");
+        agents = Agents.txtToList(path + "txt/staff.txt");
 
         for (String agent : agents) {
             List<String> lignes = new ArrayList<>();
-            Path htpasswdFile = Paths.get("txt/."+agent);
+            Path htpasswdFile = Paths.get("txt/." + agent);
             ArrayList<String> infoAgents;
-            infoAgents = Agents.txtToList(path+"txt/"+agent+".txt");
+            infoAgents = Agents.txtToList(path + "txt/" + agent + ".txt");
 
 //            System.out.println(infoAgents);
             // Création de la page de l'agent :
@@ -34,11 +36,11 @@ public class Main {
 
             // Edition du fichier htpasswdFile:
             String mdpCrypte = apr1Crypt(infoAgents.get(3));
-            lignes.add(agent+":"+mdpCrypte);
+            lignes.add(agent + ":" + mdpCrypte);
 
-            try{
-                Files.write(htpasswdFile,lignes);}
-            catch (IOException e){
+            try {
+                Files.write(htpasswdFile, lignes);
+            } catch (IOException e) {
                 e.printStackTrace();
             }
         }

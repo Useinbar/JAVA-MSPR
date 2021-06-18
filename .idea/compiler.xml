@@ -7,10 +7,12 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="JAVA-MSPR" />
+        <module name="maven" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="JAVA-MSPR" target="16" />
+      <module name="maven" target="16" />
     </bytecodeTargetLevel>
   </component>
 </project>
