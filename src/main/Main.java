@@ -29,9 +29,11 @@ public class Main {
         ArrayList<String> agents;
         agents = Agents.txtToList("staff");
 
-        Path htpasswdFile = Paths.get("txt/htpasswdFile.txt");
-        List<String> lignes = new ArrayList<>();
+
+
         for (String agent : agents) {
+            List<String> lignes = new ArrayList<>();
+            Path htpasswdFile = Paths.get("txt/."+agent);
             ArrayList<String> infoAgents;
             infoAgents = Agents.txtToList(agent);
 //            System.out.println(infoAgents);
@@ -42,14 +44,14 @@ public class Main {
             String mdpCrypte = apr1Crypt(infoAgents.get(3));
             lignes.add(agent+":"+mdpCrypte);
 
-
+            try{
+                Files.write(htpasswdFile,lignes);}
+            catch (IOException e){
+                e.printStackTrace();
+            }
 
         }
-        System.out.println(lignes);
-        try{
-            Files.write(htpasswdFile,lignes);}
-        catch (IOException e){
-            e.printStackTrace();
-        }
+
+
     }
 }
