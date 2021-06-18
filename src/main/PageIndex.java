@@ -1,12 +1,8 @@
 package main;
-
 import java.io.*;
 import java.nio.file.*;
-
 import java.util.ArrayList;
 import java.util.Collections;
-import java.util.stream.Collectors;
-
 
 public class PageIndex {
     public static void pageIndex() throws IOException {

@@ -37,18 +37,4 @@ public class Materiels {
         }
         return materiels;
     }
-
-    /**
-     *
-     */
-    public static String afficherListMateriels() throws FileNotFoundException {
-        Map<String, String> listMateriels = listMateriels(Main.path+"txt/liste.txt");
-        System.out.println("Liste de materiels :");
-        String listeDuMateriel = "";
-        for (Map.Entry mapentry : listMateriels.entrySet()) {
-            listeDuMateriel += mapentry.getValue() + "<br>";
-//            System.out.println("clé: " + mapentry.getKey() + " | valeur: " + mapentry.getValue());
-        }
-        return listeDuMateriel;
-    }
 }

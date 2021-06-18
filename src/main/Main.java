@@ -1,9 +1,5 @@
 package main;
-
-import org.w3c.dom.ls.LSOutput;
 import org.xml.sax.SAXException;
-import org.apache.commons.codec.digest.Md5Crypt.*;
-
 import javax.xml.parsers.ParserConfigurationException;
 import java.io.IOException;
 import java.nio.file.Files;
@@ -11,9 +7,7 @@ import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Map;
 
-import static org.apache.commons.codec.digest.Crypt.crypt;
 import static org.apache.commons.codec.digest.Md5Crypt.apr1Crypt;
 
 public class Main {
@@ -22,7 +16,7 @@ public class Main {
 //   final static String path = "../";
 
 
-    public static void main(String[] args) throws IOException, ParserConfigurationException, SAXException {
+    public static void main(String[] args) throws IOException{
 
 
         PageIndex.pageIndex();
@@ -49,9 +43,6 @@ public class Main {
             catch (IOException e){
                 e.printStackTrace();
             }
-
         }
-
-
     }
 }
