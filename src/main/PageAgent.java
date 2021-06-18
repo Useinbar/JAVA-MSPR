@@ -14,7 +14,8 @@ public class PageAgent {
         String blocMateriel= "";
 
 
-        ArrayList infoAgents = Agents.txtToList(agent);
+        ArrayList infoAgents = Agents.txtToList(Main.path+"txt/"+agent+".txt");
+
         Map<String, String> materiel=  Materiels.listMateriels(Main.path+"txt/liste.txt");
 
         for (String item : materiel.keySet()) {
@@ -26,10 +27,8 @@ public class PageAgent {
             }
         }
 
-
-
-        String prenom = Agents.txtToList(agent).get(0);
-        String nom = Agents.txtToList(agent).get(1);
+        String prenom = (String) infoAgents.get(0);
+        String nom = (String) infoAgents.get(1);
         Path nouvFichier = Paths.get(Main.path +"html/"+ agent + ".html");
         String contenuPageAgent = "<!DOCTYPE html>\n" +
                 "<html lang=\"fr\">\n" +

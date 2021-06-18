@@ -13,11 +13,12 @@ public class Agents {
      * @param fichier fichier contenant la liste des agents
      * @return un ArrayList des agents contenu dans le fichier en paramètre
      */
+
     public static ArrayList<String> txtToList(String fichier) throws FileNotFoundException {
-        String fichierTxt = Main.path+"txt/" + fichier + ".txt";
+
         ArrayList<String> listInfoAgents = new ArrayList<>();
         try {
-            FileReader file = new FileReader(fichierTxt);
+            FileReader file = new FileReader(fichier);
             BufferedReader bufferedReader = new BufferedReader(file);
             String line;
             line = bufferedReader.readLine();
@@ -26,7 +27,7 @@ public class Agents {
                 line = bufferedReader.readLine();
             }
         } catch (IOException e) {
-            //e.printStackTrace();
+//            e.printStackTrace();
             throw new FileNotFoundException();
         }
         return listInfoAgents;

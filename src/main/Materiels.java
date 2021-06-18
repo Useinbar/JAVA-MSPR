@@ -15,6 +15,8 @@ public class Materiels {
     public static Map<String, String> listMateriels(String fichier) throws FileNotFoundException {
         Map<String, String> materiels = new HashMap<>();
 
+
+
         try {
             FileReader file = new FileReader(fichier);
             BufferedReader bufferedReader = new BufferedReader(file);

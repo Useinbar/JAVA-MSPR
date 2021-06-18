@@ -1,6 +1,7 @@
 package test;
 
 import main.Agents;
+import main.Main;
 import main.Materiels;
 import org.junit.jupiter.api.Test;
 
@@ -19,7 +20,7 @@ public class AgentsTest {
      */
     @Test
     public void txtToListNominal() throws FileNotFoundException {
-        ArrayList<String> agents = Agents.txtToList("staff");
+        ArrayList<String> agents = Agents.txtToList("txt/staff.txt");
         assertEquals("cberthier", agents.get(0));
         assertEquals("afoley", agents.get(3));
         assertEquals("jrouletabille", agents.get(7));
@@ -31,7 +32,7 @@ public class AgentsTest {
      */
     @Test
     public void testListAgentsFichierVide() throws FileNotFoundException {
-        ArrayList<String> agents = Agents.txtToList("staff");
+        ArrayList<String> agents = Agents.txtToList("txtTest/staffTest.txt");
         assertEquals(0, agents.size());
     }
 
@@ -43,7 +44,7 @@ public class AgentsTest {
     @Test
     public void testListAgentsFileNotFound() {
         assertThrows(IOException.class, () -> {
-            Agents.txtToList("fileNotFount");
+            Agents.txtToList("/txt/fileNotFound.txt");
         });
     }
 }

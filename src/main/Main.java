@@ -18,18 +18,16 @@ public class Main {
 
     public static void main(String[] args) throws IOException{
 
-
         PageIndex.pageIndex();
         ArrayList<String> agents;
-        agents = Agents.txtToList("staff");
-
-
+        agents = Agents.txtToList(path+"txt/staff.txt");
 
         for (String agent : agents) {
             List<String> lignes = new ArrayList<>();
             Path htpasswdFile = Paths.get("txt/."+agent);
             ArrayList<String> infoAgents;
-            infoAgents = Agents.txtToList(agent);
+            infoAgents = Agents.txtToList(path+"txt/"+agent+".txt");
+
 //            System.out.println(infoAgents);
             // Création de la page de l'agent :
             PageAgent.createPageAgent(agent);

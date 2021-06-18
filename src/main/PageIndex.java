@@ -21,16 +21,17 @@ public class PageIndex {
  * Création du String (au format HTML) qui affichera la liste des agents + les liens hypertextes à insérer dans la page html.index
  */
         String newBlocAgents = "";
-        ArrayList<String> listAgentsSorted = Agents.txtToList("staff");
+        ArrayList<String> listAgentsSorted = Agents.txtToList(Main.path+"txt/staff.txt");
+
         Collections.sort(listAgentsSorted); // On trie les agents par ordre alphabétique par rapport à leur prénom
         for (String agent : listAgentsSorted) {
-            ArrayList<String> listInfoAgent = Agents.txtToList(agent);
+            ArrayList<String> listInfoAgent = Agents.txtToList(Main.path+"txt/"+agent+".txt");
             String prenom = listInfoAgent.get(1);
             String nom = listInfoAgent.get(0);
             newBlocAgents += "<a href=\"../" + agent + ".html\">" + nom + " " + prenom + " </a> <br><br>";
         }
 
-        System.out.println(newBlocAgents);
+//        System.out.println(newBlocAgents);
 
 
 /** On convertit le html en File, on copie le contenu de index.html dans oldcontent.
