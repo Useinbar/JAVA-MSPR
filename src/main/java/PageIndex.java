@@ -27,7 +27,7 @@ public class PageIndex {
             ArrayList<String> listInfoAgent = Agents.txtToList(Main.path + "src/main/resources/txt/" + agent + ".txt");
             String prenom = listInfoAgent.get(1);
             String nom = listInfoAgent.get(0);
-            newBlocAgents += "<a href=\"../" + agent + ".html\">" + nom + " " + prenom + " </a> <br><br>";
+            newBlocAgents += "<a href=\"../html/" + agent + ".html\">" + nom + " " + prenom + " </a> <br><br>";
         }
 
 //        System.out.println(newBlocAgents);
