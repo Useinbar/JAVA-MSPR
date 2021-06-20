@@ -4,13 +4,12 @@ import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.util.ArrayList;
 import java.util.List;
-
 //import org.apache.commons.codec.digest.Md5Crypt.apr1Crypt;
 
 public class Main {
 
-    final static String path = "";
-//   final static String path = "../";
+//    final static String path = "";
+   final static String path = "../";
 
 
     public static void main(String[] args) throws IOException {
