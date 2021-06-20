@@ -1,6 +1,4 @@
-package test;
 
-import main.Agents;
 import org.junit.jupiter.api.Test;
 
 import java.io.FileNotFoundException;

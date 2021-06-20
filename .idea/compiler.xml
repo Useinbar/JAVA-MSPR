@@ -11,7 +11,7 @@
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
-      <module name="JAVA-MSPR" target="16" />
+      <module name="JAVA-MSPR" target="11" />
       <module name="maven" target="16" />
     </bytecodeTargetLevel>
   </component>

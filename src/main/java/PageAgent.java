@@ -1,5 +1,3 @@
-package main;
-
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
@@ -14,9 +12,9 @@ public class PageAgent {
         String blocMateriel = "";
 
 
-        ArrayList infoAgents = Agents.txtToList(Main.path + "txt/" + agent + ".txt");
+        ArrayList infoAgents = Agents.txtToList(Main.path + "src/main/resources/txt/" + agent + ".txt");
 
-        Map<String, String> materiel = Materiels.listMateriels(Main.path + "txt/liste.txt");
+        Map<String, String> materiel = Materiels.listMateriels(Main.path + "src/main/resources/txt/liste.txt");
 
         for (String item : materiel.keySet()) {
             if (infoAgents.contains(item)) {
@@ -28,7 +26,7 @@ public class PageAgent {
 
         String prenom = (String) infoAgents.get(0);
         String nom = (String) infoAgents.get(1);
-        Path nouvFichier = Paths.get(Main.path + "html/" + agent + ".html");
+        Path nouvFichier = Paths.get(Main.path + "src/main/resources/html/" + agent + ".html");
         String contenuPageAgent = "<!DOCTYPE html>\n" +
                 "<html lang=\"fr\">\n" +
 
