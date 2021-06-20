@@ -8,7 +8,6 @@
     <artifactId>JAVA-MSPR-2</artifactId>
     <version>1.0-SNAPSHOT</version>
     <name>MSPR-JAVA</name>
-    <!-- FIXME change it to the project's website -->
     <url>http://apache.sbcorp.loc</url>
 
     <dependencies>

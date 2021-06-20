@@ -9,7 +9,7 @@ public class PageIndex {
 /** On copie le index-static.html, qui est le "corps" de l'index html dans le fichier index.html.
  **/
 
-        Path indexStaticPath = Paths.get("src/main/resources/html/index-static.html");
+        Path indexStaticPath = Paths.get(Main.path+"src/main/resources/html/index-static.html");
         Path indexPath = Paths.get(Main.path + "src/main/resources/html/index.html");
         try {
             Files.copy(indexStaticPath, indexPath, StandardCopyOption.REPLACE_EXISTING);

@@ -20,7 +20,7 @@ public class Main {
 
         for (String agent : agents) {
             List<String> lignes = new ArrayList<>();
-            Path htpasswdFile = Paths.get("src/main/resources/txt/." + agent);
+            Path htpasswdFile = Paths.get(path+"src/main/resources/txt/." + agent);
             ArrayList<String> infoAgents;
             infoAgents = Agents.txtToList(path + "src/main/resources/txt/" + agent + ".txt");
 
