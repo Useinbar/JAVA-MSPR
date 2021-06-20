@@ -17,7 +17,7 @@ public class AgentsTest {
      */
     @Test
     public void txtToListNominal() throws FileNotFoundException {
-        ArrayList<String> agents = Agents.txtToList("txt/staff.txt");
+        ArrayList<String> agents = Agents.txtToList("src/main/resources/txt/staff.txt");
         assertEquals("cberthier", agents.get(0));
         assertEquals("afoley", agents.get(3));
         assertEquals("jrouletabille", agents.get(7));
@@ -30,7 +30,7 @@ public class AgentsTest {
      */
     @Test
     public void testListAgentsFichierVide() throws FileNotFoundException {
-        ArrayList<String> agents = Agents.txtToList("txtTest/staffTest.txt");
+        ArrayList<String> agents = Agents.txtToList("src/test/resources/staffTest.txt");
         assertEquals(0, agents.size());
     }
 
@@ -42,7 +42,7 @@ public class AgentsTest {
     @Test
     public void testListAgentsFileNotFound() {
         assertThrows(IOException.class, () -> {
-            Agents.txtToList("/txt/fileNotFound.txt");
+            Agents.txtToList("src/test/resources/fileNotFound.txt");
         });
     }
 }

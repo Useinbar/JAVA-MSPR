@@ -50,6 +50,5 @@ public class PageIndex {
         writer.write(newContent);
         reader.close();
         writer.close();
-
     }
 }
