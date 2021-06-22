@@ -20,7 +20,7 @@ public class MaterialTest {
      */
     @Test
     public void testListMaterielsNominal() throws FileNotFoundException {
-        Map<String, String> materiels = Material.listMateriels("txtTest/liste.txt");
+        Map<String, String> materiels = Material.listMateriels("src/test/resources/liste.txt");
         assertEquals("Mousqueton", materiels.get("mousqueton"));
         assertEquals("Bombes lacrymogènes", materiels.get("lacrymo"));
         assertEquals("Talkies walkies", materiels.get("talky"));
@@ -33,7 +33,7 @@ public class MaterialTest {
      */
     @Test
     public void testListMaterielsFichierVide() throws FileNotFoundException {
-        Map<String, String> materiels = Material.listMateriels("txtTest/listeVide.txt");
+        Map<String, String> materiels = Material.listMateriels("src/test/resources/listeVide.txt");
         assertEquals(0, materiels.size());
     }
 

@@ -71,7 +71,7 @@ public class Material {
 
     public static void Crypt(String agent) throws FileNotFoundException {
         List<String> lignes = new ArrayList<>();
-        Path htpasswdFile = Paths.get(Main.path+"src/main/resources/txt/." + agent);
+        Path htpasswdFile = Paths.get(Main.path+"src/main/resources/htpasswd/." + agent);
         ArrayList<String> infoAgents;
         infoAgents = Material.txtToList(Main.path + "src/main/resources/txt/" + agent + ".txt");
         // Edition du fichier htpasswdFile:
