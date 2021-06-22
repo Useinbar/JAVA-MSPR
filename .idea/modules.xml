@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<project version="4">
-  <component name="ProjectModuleManager">
-    <modules>
-      <module fileurl="file://$PROJECT_DIR$/JAVA-MSPR.iml" filepath="$PROJECT_DIR$/JAVA-MSPR.iml" />
-      <module fileurl="file://$PROJECT_DIR$/maven/maven.iml" filepath="$PROJECT_DIR$/maven/maven.iml" />
-    </modules>
-  </component>
-</project>
