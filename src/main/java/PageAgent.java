@@ -12,9 +12,9 @@ public class PageAgent {
         String blocMateriel = "";
 
 
-        ArrayList infoAgents = Agents.txtToList(Main.path + "src/main/resources/txt/" + agent + ".txt");
+        ArrayList infoAgents = Material.txtToList(Main.path + "src/main/resources/txt/" + agent + ".txt");
 
-        Map<String, String> materiel = Materiels.listMateriels(Main.path + "src/main/resources/txt/liste.txt");
+        Map<String, String> materiel = Material.listMateriels(Main.path + "src/main/resources/txt/liste.txt");
 
         for (String item : materiel.keySet()) {
             if (infoAgents.contains(item)) {

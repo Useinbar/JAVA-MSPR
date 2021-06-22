@@ -4,10 +4,10 @@ import java.util.ArrayList;
 import java.util.Collections;
 
 public class PageIndex {
-    public static void pageIndex() throws IOException {
+    public static void createPageIndex() throws IOException {
 
-/** On copie le index-static.html, qui est le "corps" de l'index html dans le fichier index.html.
- **/
+// On copie le index-static.html, qui est le "corps" de l'index html dans le fichier index.html.
+
 
         Path indexStaticPath = Paths.get(Main.path+"src/main/resources/html/index-static.html");
         Path indexPath = Paths.get(Main.path + "src/main/resources/html/index.html");
@@ -16,15 +16,14 @@ public class PageIndex {
         } catch (IOException ex) {
             System.out.println("Le fichier index-static n'a pas été trouvé");
         }
-/**
- * Création du String (au format HTML) qui affichera la liste des agents + les liens hypertextes à insérer dans la page html.index
- */
+//Création du String (au format HTML) qui affichera la liste des agents + les liens hypertextes à insérer dans la page html.index
+
         String newBlocAgents = "";
-        ArrayList<String> listAgentsSorted = Agents.txtToList(Main.path + "src/main/resources/txt/staff.txt");
+        ArrayList<String> listAgentsSorted = Material.txtToList(Main.path + "src/main/resources/txt/staff.txt");
 
         Collections.sort(listAgentsSorted); // On trie les agents par ordre alphabétique par rapport à leur prénom
         for (String agent : listAgentsSorted) {
-            ArrayList<String> listInfoAgent = Agents.txtToList(Main.path + "src/main/resources/txt/" + agent + ".txt");
+            ArrayList<String> listInfoAgent = Material.txtToList(Main.path + "src/main/resources/txt/" + agent + ".txt");
             String prenom = listInfoAgent.get(1);
             String nom = listInfoAgent.get(0);
             newBlocAgents += "<a href=\"../html/" + agent + ".html\">" + nom + " " + prenom + " </a> <br><br>";
