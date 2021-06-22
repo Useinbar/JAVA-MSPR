@@ -1,4 +1,6 @@
+package com.sbcorp;
 
+import com.sbcorp.Material;
 import org.junit.jupiter.api.Test;
 
 import java.io.FileNotFoundException;
