@@ -71,7 +71,8 @@
           <configuration>
             <archive>
               <manifest>
-                <mainClass>.com.sbcorp.Main</mainClass>
+<!--                <mainClass>.com.sbcorp.Main</mainClass>-->
+                <addClasspath>true</addClasspath>
               </manifest>
             </archive>
           </configuration>
