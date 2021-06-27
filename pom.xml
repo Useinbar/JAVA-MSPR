@@ -105,6 +105,7 @@
             <archive>
               <manifest>
                 <mainClass>com.sbcorp.Main</mainClass>
+                <addClasspath>true</addClasspath>
               </manifest>
             </archive>
             <descriptorRefs>

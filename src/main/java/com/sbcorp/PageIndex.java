@@ -14,8 +14,8 @@ public class PageIndex {
      */
     public static void createPageIndex() throws IOException {
 
-        Path indexStaticPath = Paths.get(Main.path+"index-static.html");
-        Path indexPath = Paths.get(Main.path + "index.html");
+        Path indexStaticPath = Paths.get(Main.path+"src/main/resources/html/index-static.html");
+        Path indexPath = Paths.get(Main.path + "src/main/resources/html/index.html");
         try {
             Files.copy(indexStaticPath, indexPath, StandardCopyOption.REPLACE_EXISTING);
         } catch (IOException ex) {
@@ -26,7 +26,7 @@ public class PageIndex {
         String newBlocAgents = "";
 
         //on récupère la liste des agents
-        ArrayList<String> listAgentsSorted = Material.txtToList(Main.path + "txt/staff.txt");
+        ArrayList<String> listAgentsSorted = Material.txtToList(Main.path + "src/main/resources/txt/staff.txt");
 
         // On trie les agents par ordre alphabétique par rapport à leur prénom
         Collections.sort(listAgentsSorted);
