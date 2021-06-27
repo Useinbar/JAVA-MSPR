@@ -84,8 +84,7 @@
           <configuration>
             <archive>
               <manifest>
-<!--                <mainClass>.com.sbcorp.Main</mainClass>-->
-<!--                <addClasspath>true</addClasspath>-->
+                <mainClass>.com.sbcorp.Main</mainClass>
                 <addClasspath>true</addClasspath>
                 <mainClass>Main</mainClass>
               </manifest>
@@ -112,14 +111,6 @@
         <plugin>
           <artifactId>maven-project-info-reports-plugin</artifactId>
           <version>3.0.0</version>
-        </plugin>
-        <plugin>
-          <groupId>org.codehaus.mojo</groupId>
-          <artifactId>exec-maven-plugin</artifactId>
-          <version>1.2.1</version>
-          <configuration>
-            <mainClass>com.sbcorp.Main</mainClass>
-          </configuration>
         </plugin>
       </plugins>
     </pluginManagement>
