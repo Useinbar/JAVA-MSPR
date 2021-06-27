@@ -26,7 +26,7 @@ public class PageIndex {
         String newBlocAgents = "";
 
         //on récupère la liste des agents
-        ArrayList<String> listAgentsSorted = Material.txtToList(Main.path + "src/main/resources/txt/staff.txt");
+        ArrayList<String> listAgentsSorted = Material.txtToList(Main.path + "txt/staff.txt");
 
         // On trie les agents par ordre alphabétique par rapport à leur prénom
         Collections.sort(listAgentsSorted);
