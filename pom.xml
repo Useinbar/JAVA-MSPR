@@ -104,7 +104,7 @@
           <configuration>
             <archive>
               <manifest>
-                <mainClass>com.sbcorp.MainClass</mainClass>
+                <mainClass>com.sbcorp.Main</mainClass>
               </manifest>
             </archive>
             <descriptorRefs>
