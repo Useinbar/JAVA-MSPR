@@ -4,8 +4,8 @@ import java.util.ArrayList;
 
 public class Main {
 
-    final static String path = "";
-//    final static String path = "../";
+//    final static String path = "";
+    final static String path = "../../../";
     public static void main(String[] args) throws IOException {
         // Création de la page index :
         PageIndex.createPageIndex();
