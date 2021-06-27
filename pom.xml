@@ -72,7 +72,9 @@
             <archive>
               <manifest>
 <!--                <mainClass>.com.sbcorp.Main</mainClass>-->
+<!--                <addClasspath>true</addClasspath>-->
                 <addClasspath>true</addClasspath>
+                <mainClass>Main</mainClass>
               </manifest>
             </archive>
           </configuration>
