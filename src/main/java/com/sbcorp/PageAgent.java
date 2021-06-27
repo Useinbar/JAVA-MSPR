@@ -10,6 +10,10 @@ import java.util.Map;
 
 public class PageAgent {
 
+    /**
+     * createPageAgent est chargé de créer les pages de chaque agent
+     * @param agent l'identifiant de l'agent (première lettre du prénom+nom) (comme cbertier par exemple)
+     */
     public static void createPageAgent(String agent) throws IOException {
         String blocMateriel = "";
 
@@ -18,6 +22,9 @@ public class PageAgent {
 
         Map<String, String> materiel = Material.listMateriels(Main.path + "src/main/resources/txt/liste.txt");
 
+        // Pour chaque matériel, si l'agent possède l'objet, on lui mettra une case coché (checked) devant le nom de l'objet
+        // Sinon, elle sera décochée.
+        // onclick="return false;" permet de rendre la boite statique (on ne pourra pas passer à l'autre)
         for (String item : materiel.keySet()) {
             if (infoAgents.contains(item)) {
                 blocMateriel += "<div>  <input type=\"checkbox\"  onclick=\"return false;\" checked> <label for=\"scales\">" + materiel.get(item) + "</label></div>";
@@ -26,6 +33,7 @@ public class PageAgent {
             }
         }
 
+        //On crée la page html de l'agent, et on insère dedans le "grand" String qui se nomme contenuPageAgent.
         String prenom = (String) infoAgents.get(0);
         String nom = (String) infoAgents.get(1);
         Path nouvFichier = Paths.get(Main.path + "src/main/resources/html/" + agent + ".html");
@@ -50,11 +58,7 @@ public class PageAgent {
                 "</html>\n" +
                 "\n";
 
-
-//        try {
         Files.write(nouvFichier, Collections.singleton(contenuPageAgent));
-//        } catch (IOException e) {
-//            e.printStackTrace();
-//        }
+
     }
 }

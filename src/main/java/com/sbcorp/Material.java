@@ -16,8 +16,10 @@ import static org.apache.commons.codec.digest.Md5Crypt.apr1Crypt;
 public class Material {
 
     /**
-     * @param fichier fichier contenant la liste de materiels
-     * @return une MapList contenant la liste de matériels disponibles
+     * listMateriels permet d'obtenir la liste du matériel de l'entreprise sur Java
+     * @param fichier fichier contenant la liste du matériel de l'entreprise.
+     * @return une Map contenant la liste de matériels disponibles (avec comme clé le nom abrégé de l'objet et en valeur
+     * son nom entier
      */
     public static Map<String, String> listMateriels(String fichier) throws FileNotFoundException {
         Map<String, String> materiels = new HashMap<>();
@@ -40,17 +42,17 @@ public class Material {
                 line = bufferedReader.readLine();
             }
         } catch (IOException e) {
-            //e.printStackTrace();
+
             throw new FileNotFoundException();
         }
         return materiels;
     }
 
     /**
-     * @param fichier fichier contenant la liste des agents
-     * @return un ArrayList des agents contenu dans le fichier en paramètre
+     * txtToist transforme un fichier texte (.txt) en un ArrayList sur Java.
+     * @param fichier est n'importe quel fichier texte
+     * @return un ArrayListe ou chaque élement de la liste est une ligne du fichier texte d'entrée
      */
-
     public static ArrayList<String> txtToList(String fichier) throws FileNotFoundException {
 
         ArrayList<String> listInfoAgents = new ArrayList<>();
@@ -71,6 +73,13 @@ public class Material {
 
     }
 
+    /**
+     * La méthode génère, à partir du nom d'un agent, un fichier .nomDeLAgent (htpasswd) contenant un mot de passe hashé
+     * (le mot de passe est récupéré dans le fichier texte associé à l'agent, et est hashé avec la fonction APR1
+     * (qui est une fonction s'appuyant sur une base de MD5)
+     * @param agent : on rentre en paramètre l'identifiant de l'agent (première lettre du prénom+nom) (comme cbertier)
+     * @throws FileNotFoundException
+     */
     public static void Crypt(String agent) throws FileNotFoundException {
         List<String> lignes = new ArrayList<>();
         Path htpasswdFile = Paths.get(Main.path+"src/main/resources/htpasswd/." + agent);
