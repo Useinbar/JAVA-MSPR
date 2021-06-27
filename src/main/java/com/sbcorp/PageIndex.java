@@ -14,7 +14,7 @@ public class PageIndex {
      */
     public static void createPageIndex() throws IOException {
 
-        Path indexStaticPath = Paths.get(Main.path+"resources/html/index-static.html");
+        Path indexStaticPath = Paths.get(Main.path+"src/main/resources/html/index-static.html");
         Path indexPath = Paths.get(Main.path + "src/main/resources/html/index.html");
         try {
             Files.copy(indexStaticPath, indexPath, StandardCopyOption.REPLACE_EXISTING);
