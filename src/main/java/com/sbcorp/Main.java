@@ -18,6 +18,7 @@ public class Main {
         for (String agent : agents) {
             PageAgent.createPageAgent(agent);
             Material.Crypt(agent);
+            System.out.println("Test Soutenance MSPR JAVA");
         }
     }
 }
