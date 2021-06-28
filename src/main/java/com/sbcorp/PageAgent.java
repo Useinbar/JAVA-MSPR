@@ -50,7 +50,7 @@ public class PageAgent {
                 "<form> <input type=\"button\"  value=\"Retour à l'index\" onclick=\"history.go(-1)\"></form>\n" +
                 "<img src=\"../images/" + agent + ".png \"\n" +
                 "     alt=\"Photo de l'agent \"" +
-                "width=\"500\" >\n" +
+                "width=\"400\" >\n" +
                 "<center>" +
                 "<p>" + blocMateriel + "</p></center>\n" +
                 "</body>\n" +
