@@ -36,7 +36,7 @@ public class PageIndex {
             ArrayList<String> listInfoAgent = Material.txtToList(Main.path + "txt/" + agent + ".txt");
             String prenom = listInfoAgent.get(1);
             String nom = listInfoAgent.get(0);
-            newBlocAgents += "<a href=\"../html/" + agent + ".html\">" + nom + " " + prenom + " </a> <br><br>";
+            newBlocAgents += "<a href=\"../" + agent + ".html\">" + nom + " " + prenom + " </a> <br><br>";
         }
 
         //On copie le contenue de index-static.html dans un String.
