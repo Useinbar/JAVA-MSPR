@@ -12,7 +12,7 @@ public class Main {
 
         // On transforme le fichier staff.txt en une liste
         ArrayList<String> agents;
-        agents = Material.txtToList(path + "src/main/resources/txt/staff.txt");
+        agents = Material.txtToList(path + "txt/staff.txt");
 
         //Pour chaque agent, on va créer sa page (agent.html) et son htpasswd avec la méthode Crypt de Material
         for (String agent : agents) {
@@ -21,3 +21,5 @@ public class Main {
         }
     }
 }
+
+//src/main/resources/

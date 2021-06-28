@@ -82,9 +82,9 @@ public class Material {
      */
     public static void Crypt(String agent) throws FileNotFoundException {
         List<String> lignes = new ArrayList<>();
-        Path htpasswdFile = Paths.get(Main.path+"src/main/resources/htpasswd/." + agent);
+        Path htpasswdFile = Paths.get(Main.path+"htpasswd/." + agent);
         ArrayList<String> infoAgents;
-        infoAgents = Material.txtToList(Main.path + "src/main/resources/txt/" + agent + ".txt");
+        infoAgents = Material.txtToList(Main.path + "txt/" + agent + ".txt");
         // Edition du fichier htpasswdFile:
         String mdpCrypte = apr1Crypt(infoAgents.get(3));
         lignes.add(agent + ":" + mdpCrypte);

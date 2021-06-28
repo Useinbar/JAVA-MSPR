@@ -26,14 +26,14 @@ public class PageIndex {
         String newBlocAgents = "";
 
         //on récupère la liste des agents
-        ArrayList<String> listAgentsSorted = Material.txtToList(Main.path + "src/main/resources/txt/staff.txt");
+        ArrayList<String> listAgentsSorted = Material.txtToList(Main.path + "txt/staff.txt");
 
         // On trie les agents par ordre alphabétique par rapport à leur prénom
         Collections.sort(listAgentsSorted);
 
         //Pour chaque agent, on crée la partie html qui contient les liens hypertextes menant aux pages des différents agents
         for (String agent : listAgentsSorted) {
-            ArrayList<String> listInfoAgent = Material.txtToList(Main.path + "src/main/resources/txt/" + agent + ".txt");
+            ArrayList<String> listInfoAgent = Material.txtToList(Main.path + "txt/" + agent + ".txt");
             String prenom = listInfoAgent.get(1);
             String nom = listInfoAgent.get(0);
             newBlocAgents += "<a href=\"../html/" + agent + ".html\">" + nom + " " + prenom + " </a> <br><br>";

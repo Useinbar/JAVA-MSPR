@@ -18,9 +18,9 @@ public class PageAgent {
         String blocMateriel = "";
 
 
-        ArrayList infoAgents = Material.txtToList(Main.path + "src/main/resources/txt/" + agent + ".txt");
+        ArrayList infoAgents = Material.txtToList(Main.path + "txt/" + agent + ".txt");
 
-        Map<String, String> materiel = Material.listMateriels(Main.path + "src/main/resources/txt/liste.txt");
+        Map<String, String> materiel = Material.listMateriels(Main.path + "txt/liste.txt");
 
         // Pour chaque matériel, si l'agent possède l'objet, on lui mettra une case coché (checked) devant le nom de l'objet
         // Sinon, elle sera décochée.
@@ -36,7 +36,7 @@ public class PageAgent {
         //On crée la page html de l'agent, et on insère dedans le "grand" String qui se nomme contenuPageAgent.
         String prenom = (String) infoAgents.get(0);
         String nom = (String) infoAgents.get(1);
-        Path nouvFichier = Paths.get(Main.path + "src/main/resources/html/" + agent + ".html");
+        Path nouvFichier = Paths.get(Main.path + "html/" + agent + ".html");
         String contenuPageAgent = "<!DOCTYPE html>\n" +
                 "<html lang=\"fr\">\n" +
 
